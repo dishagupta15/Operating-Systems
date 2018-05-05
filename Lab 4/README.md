@@ -1,3 +1,5 @@
+# Lab 4
+
 This assignment simulates demand paging and looks into how the number of page faults depends on page size, program size,
 replacement algorithm, and job mix.
 
