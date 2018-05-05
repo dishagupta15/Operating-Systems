@@ -61,8 +61,8 @@ int main(int argc, char * argv[])
 
 	// check command line input
 	if((argc < 7) | (argc > 8)){
-      	printf("usage: <program-name> M P S J N R <V> \n");
-      	printf("M : machine size in words \n");
+      		printf("usage: <program-name> M P S J N R <V> \n");
+      		printf("M : machine size in words \n");
   		printf("P : page size in words \n");
   		printf("S : size of each process \n");
   		printf("J : job mix (1 to 4) \n");
