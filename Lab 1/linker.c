@@ -23,13 +23,13 @@ int main(int argc, char * argv[])
 {
   	FILE *fp_in, *fp_out;
 	int module, NUM_MODULES; 
-	int	address, max_address, base_address; 
-	int	cnt, cnt1, cnt2;
+	int address, max_address, base_address; 
+	int cnt, cnt1, cnt2;
 	int symbol_cnt, max_symbol;
 	char symbol[MAX_SYMBOLS];
 	char lsb; 
 	char range_error_symbol[10];
-	int	range_error_flag, range_error_module; 
+	int range_error_flag, range_error_module; 
 	int E_ref_flag[MAX_MODULES], E_ref_module[MAX_MODULES];
 	char E_ref_symbol[MAX_MODULES][20];
 	bool symbol_found; 
@@ -49,12 +49,12 @@ int main(int argc, char * argv[])
 		char value[10]; // 4 digit instructions (stored as string).
 	} instructions[MAX_MODULES][MAX_INSTRUCTIONS];
 
-	int	num_instructions[MAX_MODULES]; 
+	int num_instructions[MAX_MODULES]; 
 	
 	// Define variables for linker output.
 	struct Symbol_T{ 
 		char name[20]; // Name of symbol.
-		int	absolute; // Absolute value of symbol after resolving base address.
+		int absolute; // Absolute value of symbol after resolving base address.
 		int count; // Number of times a symbol is defined.
 	} Symbol_Table[MAX_SYMBOLS];
 
