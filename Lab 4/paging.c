@@ -15,8 +15,8 @@
 #define	MAX_PHYSICAL 100 	// maximum number of physical pages			
 #define MAX_INT 2147483647
 
-int	random_no(FILE *fp, float param1, float param2, float param3); 
-int	random_val(FILE *fp_rand, int param);
+int random_no(FILE *fp, float param1, float param2, float param3); 
+int random_val(FILE *fp_rand, int param);
 	
 int main(int argc, char * argv[])
 {
@@ -30,15 +30,15 @@ int main(int argc, char * argv[])
 	int	N; 					// number of references for each process
 	int	V; 					// verbose flag
 	int	Q; 					// number of round robin references per process
-	char R[10];				// replacement algorithm
-	int process_no; 		// number of processes
+	char	R[10];					// replacement algorithm
+	int process_no; 				// number of processes
 	float A[MAX_PROCESS], B[MAX_PROCESS], C[MAX_PROCESS], avg; 			
 						
 	// parameters for probability calculations
 	struct	PT{
 		int	FT_index;
 		int	valid; 
-		int	referenced; 	// is page referenced (not required)
+		int	referenced; 		// is page referenced (not required)
 		int	residency;		// page residency time
 	} page_table[MAX_PROCESS][MAX_VIRTUAL];
 
@@ -52,7 +52,7 @@ int main(int argc, char * argv[])
 	struct PS{
 		int	residency; 		// running sum of residency time
 		int	faults; 		// running sum of number of faults
-		int	reference_word;	// reference index for each process
+		int	reference_word;		// reference index for each process
 		int	evictions; 
 	} process_stats[MAX_PROCESS]; 
 
